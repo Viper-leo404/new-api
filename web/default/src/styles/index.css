@@ -454,21 +454,39 @@ For commercial licensing, please contact support@quantumnous.com
 }
 
 /* Micro-interactions — Vercel-style subtle hover/active feedback */
+[data-slot='card'] {
+  border: 1.5px solid transparent;
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    linear-gradient(
+        135deg,
+        rgba(217, 119, 6, 0.55),
+        rgba(245, 158, 11, 0.18),
+        rgba(255, 255, 255, 0.08)
+      )
+      border-box;
+  box-shadow: 0 14px 38px rgba(8, 14, 26, 0.28);
+}
+
+[data-slot='card'] [data-slot='card'] {
+  border-radius: 20.5px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   [data-slot='card'] {
     transition:
-      transform 150ms ease,
-      box-shadow 150ms ease;
+      transform 300ms ease,
+      box-shadow 300ms ease;
   }
 
   @media (min-width: 641px) {
     [data-slot='card']:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 4px 12px rgb(0 0 0 / 0.06);
+      transform: translateY(-6px);
+      box-shadow: 0 22px 54px rgba(245, 158, 11, 0.22);
     }
 
     .dark [data-slot='card']:hover {
-      box-shadow: 0 4px 12px rgb(0 0 0 / 0.3);
+      box-shadow: 0 22px 54px rgba(245, 158, 11, 0.26);
     }
   }
 

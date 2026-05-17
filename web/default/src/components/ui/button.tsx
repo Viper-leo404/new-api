@@ -22,15 +22,16 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-center rounded-lg border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button inline-flex shrink-0 items-center justify-center rounded-[28px] border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all duration-300 ease-out outline-none select-none hover:-translate-y-1 focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:translate-y-0 disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
-        default: 'bg-primary text-primary-foreground [a]:hover:bg-primary/80',
+        default:
+          'bg-[linear-gradient(135deg,#D97706_0%,#F59E0B_100%)] text-[#080E1A] shadow-[0_2px_6px_rgba(245,158,11,0.12)] hover:shadow-[0_4px_10px_rgba(245,158,11,0.16)] [a]:hover:bg-[linear-gradient(135deg,#D97706_0%,#F59E0B_100%)]',
         outline:
-          'border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50',
+          'border-[1.5px] border-[rgba(217,119,6,0.4)] bg-transparent text-[#D97706] hover:border-[rgba(217,119,6,0.72)] hover:bg-[#D97706]/10 hover:text-[#F59E0B] aria-expanded:bg-[#D97706]/10 aria-expanded:text-[#F59E0B]',
         secondary:
-          'bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground',
+          'border-[rgba(255,255,255,0.22)] bg-white/[0.08] text-white shadow-[0_10px_28px_rgba(8,14,26,0.24)] backdrop-blur-xl hover:bg-white/[0.13] hover:shadow-[0_16px_38px_rgba(8,14,26,0.32)] aria-expanded:bg-white/[0.13] aria-expanded:text-white',
         ghost:
           'hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50',
         destructive:
